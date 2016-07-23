@@ -4,13 +4,13 @@ from flask import Flask, request, session, g, redirect, \
 from flask.ext import assets
 from werkzeug.utils import secure_filename
 
-import os
+import os, os.path
+
 
 app = Flask(__name__)
 
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'py'}
-
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -61,6 +61,8 @@ def uploaded_file(filename):
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
+    if not os.path.exists('./uploads'):
+        os.mkdir('./uploads')
     if request.method == 'POST':
         # check if the post request has the file part
         if 'file' not in request.files:
