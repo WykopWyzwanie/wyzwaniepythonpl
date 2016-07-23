@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    {% assets "css_all" %}
+        <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}"></script>
+    {% endassets %}
+    <link rel=stylesheet type=text/css href="/static/css/main.css">
+    <title>WyzwaniePython.pl</title>
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Wyzwanie Python</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/check">Zgłoś rozwiązanie</a></li>
+            <li><a href="{{ url_for('about_page') }}">O inicjatywie</a></li>
+            <li><a href="{{ url_for('contact_page') }}">Kontakt</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    {% block body %}
+    <div class="container">
+        <h1>Strona główna Wyzwania Python (alpha)</h1>
+
+        <p class="lead">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+        tincidunt lobortis fringilla. Morbi condimentum ipsum et velit
+        tristique venenatis. Vivamus feugiat, odio pulvinar ullamcorper
+        vulputate, ligula massa porta dolor, mattis commodo dolor turpis id
+        libero. Integer sollicitudin ex porttitor eros rhoncus, vitae dignissim
+        lacus lacinia. Donec ornare efficitur massa et faucibus. Aenean non
+        nibh non libero blandit posuere et rhoncus magna. Proin placerat libero
+        nec justo vestibulum, vel bibendum leo faucibus. Maecenas eu ultrices
+        odio, ac posuere magna. Sed et venenatis lorem. Nullam sed elit id
+        neque sollicitudin aliquam. Aenean porttitor posuere vehicula. Praesent
+        sollicitudin elit et sem posuere efficitur. Nam ac sem sed sapien
+        finibus tempus in ut ipsum.
+        </p>
+
+        <p class="lead">
+        Mauris et nulla mattis, vehicula turpis ut, semper massa. Aliquam
+        molestie dictum lacus, quis suscipit dui vestibulum vel. Pellentesque
+        at libero fringilla, blandit mauris at, sagittis elit. Vestibulum vitae
+        nulla tincidunt, convallis tellus non, gravida ex. Integer eget maximus
+        tortor. Curabitur lobortis scelerisque nisi, vitae elementum nulla
+        faucibus eget. Proin consectetur sit amet ante vitae laoreet.</p>
+
+    </div><!-- /.container -->
+    {% endblock %}
+
+
+    {% assets "js_all" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+  </body>
+</html>
