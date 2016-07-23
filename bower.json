@@ -1,0 +1,27 @@
+{
+  "name": "wyzwaniepythonpl",
+  "authors": [
+    "Qof Naught <qof.naught@gmail.com>"
+  ],
+  "description": "Strona główna projektu #wyzwaniepython",
+  "main": "",
+  "keywords": [
+    "python",
+    "learning",
+    "programming"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^3.1.0"
+  }
+}
